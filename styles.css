@@ -182,9 +182,9 @@ button:hover {
 }
 
 .goalItem:before {
-    content: "•";
+    content: "◉";
     color: #87CEEB;
-    font-size: 1.2em; /* Smaller bullet size */
+    font-size: 1.8em; /* Smaller bullet size */
     margin-right: 8px; /* Closer bullet to text */
     cursor: pointer;
 }
