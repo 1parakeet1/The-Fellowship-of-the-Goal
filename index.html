@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fellowship of the Goal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginContainer" class="login-card">
+        <h1>The Fellowship of the Goal</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <div class="user-details">
+            <h1 id="userName" class="title"></h1>
+            <h2 id="currentDate" class="date"></h2>
+        </div>
+        
+        <div id="goalContainer">
+            <div class="goalSection" id="createGoal">
+                <h3>Create New Goal</h3>
+                <button onclick="openGoalPopup()">Add New Goal</button>
+            </div>
+
+            <div class="goalSection" id="viewGoal">
+                <h3>Your Goals</h3>
+                <ul id="goalList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="goalPopup" style="display: none;">
+        <div id="popupContent">
+            <h3>Enter Goal</h3>
+            <textarea id="goalText" placeholder="Type your goal here..."></textarea>
+            <button onclick="submitGoal()">Submit</button>
+            <button onclick="closeGoalPopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

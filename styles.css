@@ -1,0 +1,254 @@
+/* Global Styles */
+body {
+    background: url('peter-thomas-EZPdIL002OE-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1, h2, h3, button {
+    font-family: 'Helvetica', sans-serif;
+}
+
+.page-title {
+    font-size: 3em;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-details {
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    margin-left: 30px;
+    margin-right: 0px;
+    width: 87%;
+    font-family: 'Courier New', monospace;
+}
+
+.user-details h1 {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-details h2 {
+    font-size: 1.5em;
+    color: #000;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 1em;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    background-color: #87CEEB;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #00BFFF;
+}
+
+#mainContent {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#goalContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    gap: 5%;
+    margin-top: 50px;
+}
+
+/* Fixed Height for Goal Sections */
+.goalSection {
+    width: 35%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px; /* Fixed height */
+}
+
+/* Scrollable Your Goals section with visible scroll bar */
+#viewGoal {
+    overflow-y: scroll;
+}
+
+#viewGoal::-webkit-scrollbar {
+    width: 8px;
+}
+
+#viewGoal::-webkit-scrollbar-thumb {
+    background-color: #87CEEB;
+    border-radius: 8px;
+}
+
+/* Popup styles */
+#goalPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popupContent {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#goalText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 1em;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Goal List Styling */
+#goalList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.goalItem {
+    margin-bottom: 10px; /* Reduced space between items */
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.goalItem:before {
+    content: "•";
+    color: #87CEEB;
+    font-size: 1.2em; /* Smaller bullet size */
+    margin-right: 8px; /* Closer bullet to text */
+    cursor: pointer;
+}
+
+.goalItemText {
+    word-wrap: break-word;
+    flex: 1;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+
+    #goalContainer{
+        width: 80%;
+        align-items: center;
+    }
+
+    #mainContent {
+        align-items: flex-start; /* Left-align content */
+        margin-top: 10px;
+    }
+
+    .user-details {
+        position: absolute;
+        width: 80%;
+        align-items: right;
+        margin-bottom: 10px;
+        margin-top: 20px; /* Lowered to prevent overlap */
+        margin-left: 20px;
+        margin-right: 0px;
+        font-family: 'Courier New', monospace;
+        
+    }
+
+    #goalContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Spacing between sections */
+        width: 80%; /* Reduced width for spacing from edges */
+    }
+
+    .goalSection {
+        width: 95%; /* Full width for mobile view */
+        height: 200px; /* Adjusted height */
+        margin-bottom: 15px; /* Space between sections */
+        margin-left: 0px;
+        margin-right: -20px;
+    }
+
+    /* Smaller font sizes for better mobile fit */
+    .page-title {
+        font-size: 2em;
+    }
+
+    .user-details h1 {
+        font-size: 1.5em;
+    }
+
+    .user-details h2 {
+        font-size: 1.2em;
+    }
+
+    /* Popup Content Adaptation */
+    #popupContent {
+        width: 90%;
+    }
+}
